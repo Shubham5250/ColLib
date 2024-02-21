@@ -64,7 +64,7 @@
             </form>
             <?php 
                 if(isset($_POST['login'])){
-                    $connection = mysqli_connect("localhost","root","");
+                    $connection = mysqli_connect("localhost","root","root");
                     $db = mysqli_select_db($connection,"lms");
                     $query = "select * from users where email = '$_POST[email]'";
                     $query_run = mysqli_query($connection,$query);
